@@ -1,7 +1,7 @@
 url: https://snoopy-team-api.shippy-ops.workers.dev/healthz
-status: down
+status: up
 code: 403
-responseTime: 28
-lastUpdated: 2026-10-07T13:37:01.161Z
+responseTime: 178
+lastUpdated: 2026-10-07T13:39:38.804Z
 startTime: 2026-10-07T13:36:48.973Z
 generator: Upptime <https://github.com/upptime/upptime>
