@@ -9,12 +9,6 @@ sites:
     url: https://app.shipcode.com/studio/
   - name: Shippy responder
     url: https://snoopy-team-api.shippy-ops.workers.dev/slack/health
-  # D-44 proof monitor: this URL returns 403 by design, so expecting 200 made Upptime open an Issue; flipped to 403 to prove auto-close.
-  # Removed once the open/close proof is captured.
-  - name: d44-canary
-    url: https://snoopy-team-api.shippy-ops.workers.dev/healthz
-    expectedStatusCodes:
-      - 403
 
 status-website:
   baseUrl: /shippy-status
