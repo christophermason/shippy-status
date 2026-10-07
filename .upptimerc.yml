@@ -1,31 +1,29 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Shippy public status page (DECISIONS-AHEAD D-44, lane d44-upptime-1007)
+owner: christophermason
+repo: shippy-status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Shipcode API
+    url: https://app.shipcode.com/api/health
+  - name: Shipcode Studio
+    url: https://app.shipcode.com/studio/
+  - name: Shippy responder
+    url: https://snoopy-team-api.shippy-ops.workers.dev/slack/health
+  # D-44 proof monitor: this URL returns 403 by design, so expecting 200 makes Upptime open an Issue.
+  # Removed once the open/close proof is captured.
+  - name: d44-canary
+    url: https://snoopy-team-api.shippy-ops.workers.dev/healthz
+    expectedStatusCodes:
+      - 200
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  baseUrl: /shippy-status
+  name: Shippy status
+  theme: light
+  introTitle: "**Shippy status**"
+  introMessage: Live uptime for the Shipcode API, Shipcode Studio and the Shippy Slack responder. Outages open a GitHub Issue automatically and close it on recovery.
   navbar:
     - title: Status
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
